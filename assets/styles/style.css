@@ -39,6 +39,10 @@ body {
 .container-nav {
     background-color: var(--background-main);
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 .nav{
@@ -49,8 +53,14 @@ body {
 }
 
 .menu-mobile {
-    cursor: pointer;
+    
     display: none;
+}
+
+.menu-mobile button {
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
 
 .nav .logo {
@@ -107,6 +117,7 @@ body {
 /* style inicio */
 .inicio {
     height: calc(100vh - 70px);
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,7 +203,7 @@ body {
 
 .container-image img {
     width: 100%;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 .container-image::before {
@@ -205,6 +216,14 @@ body {
     background-color: #f1f1f1;
     animation: surge 2.5s ease forwards;
     animation-delay: .4s;
+}
+
+.gradiente {
+    width: 100%;
+    height: 40%;
+    bottom:0;
+    position: absolute;
+    background: linear-gradient(0deg, rgb(241, 241, 241) 20%, rgba(255,255,255,0) 100%);
 }
 
 /* buttons */
@@ -311,11 +330,11 @@ body {
     padding: 40px 0;
 }
 
-.habilidades{
+#habilidades{
     position: relative;
 }
 
-.habilidades h2 {
+#habilidades h2 {
     color: var(--color-text-white);
     text-align: center;
     font-size: 2.5rem;
@@ -582,7 +601,36 @@ body {
         box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
     }
     
-    
+    .nav .logo::before {
+        display: none;
+    }
+    .nav .menu a::before {
+        display: none;
+    }
+
+    .apresentation h1::before {
+        display: none;
+    }
+
+    .apresentation h3::before {
+        display: none;
+    }
+
+    .apresentation p::before {
+        display: none;
+    }
+
+    .container-image::before {
+        display: none;
+    }
+
+    .container--button::before {
+        display: none;
+    }
+
+    .before::before {
+        display: none;
+    }
     /* style inicio */
     .inicio {
         height: 100%;
@@ -669,23 +717,66 @@ body {
         width: 90%;
     }
 
+    .nav .logo::before {
+        display: none;
+    }
     .nav {
         transition: ease-in-out 2s;
     }
 
+    .nav .menu a::before {
+        display: none;
+    }
+
+    .apresentation h1::before {
+        display: none;
+    }
+
+    .apresentation h3::before {
+        display: none;
+    }
+
+    .apresentation p::before {
+        display: none;
+    }
+
+    .container-image::before {
+        display: none;
+    }
+
+    .container--button::before {
+        display: none;
+    }
+
+    .before::before {
+        display: none;
+    }
+
+    @keyframes menuMobile {
+        0%{
+            top:-300px;
+        } 100% {
+            top: 70px;
+        }
+    }
     .nav .menu {
         position: absolute;
         flex-direction: column;
         top: 70px;
         right: 0;
         background-color: var(--background-main);
-        width: 70vw;
-        height: 100vh;
+        width: 100vw;
+        height: max-content;
         align-items: center;
         z-index: 1000;
         border-top: 1px solid #9e9e9e;
-        padding: 10px 0;
+        padding: 2rem 0;
+        animation: menuMobile 1s ease-in-out;
         display: none;
+    }
+
+    .nav .menu a{
+        padding: .4rem;
     }
     
     .menu-mobile {
@@ -755,7 +846,7 @@ body {
         cursor: pointer;
     }
 
-    .habilidades h2 {
+    #habilidades h2 {
         font-size: 28px;
     }
 
@@ -831,6 +922,10 @@ body {
         transition: ease-in-out 2s;
     }
 
+    .nav .logo::before {
+        display: none;
+    }
+
     .nav .menu {
         position: absolute;
         flex-direction: column;
@@ -848,6 +943,34 @@ body {
     
     .menu-mobile {
         display: block;
+    }
+
+    .nav .menu a::before {
+        display: none;
+    }
+
+    .apresentation h1::before {
+        display: none;
+    }
+
+    .apresentation h3::before {
+        display: none;
+    }
+
+    .apresentation p::before {
+        display: none;
+    }
+
+    .container-image::before {
+        display: none;
+    }
+
+    .container--button::before {
+        display: none;
+    }
+
+    .before::before {
+        display: none;
     }
     
     /* style inicio */
@@ -913,7 +1036,7 @@ body {
         cursor: pointer;
     }
 
-    .habilidades h2 {
+    #habilidades h2 {
         font-size: 28px;
     }
 
