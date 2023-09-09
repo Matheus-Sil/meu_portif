@@ -117,7 +117,7 @@ body {
     animation-delay: .4s;
 }
 
-#active {
+.active  {
     color: var(--color-title-span);
     border-bottom: 2px solid var(--color-title-span);
 }
@@ -338,6 +338,10 @@ body {
     padding: 40px 0;
 }
 
+.model {
+    display: none;
+}
+
 #habilidades{
     position: relative;
 }
@@ -359,9 +363,14 @@ body {
     margin-top: 40px
 }
 
-.icons-habilidades .icons {
+.icons a img {
     width: 100px;
     cursor: pointer;
+}
+
+.icons p {
+    color: var(--color-text-white);
+    text-align: center;
 }
 
 /* description float */

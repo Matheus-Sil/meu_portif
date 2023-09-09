@@ -1,0 +1,8 @@
+let habilidades = [
+    {id:1, title:'HTML', img:"assets/img/html.svg", pct:'90%', description:'Minhas habilidades com HTML já são bem desenvolvidas, passei muito tempo praticando essa técnologia e hoje em dia me considero bem preparado para fazer qualquer coisa que precise utilizar esse recurso.'},
+    {id:2, title:'CSS', img:"assets/img/css.svg", pct:'90%', description:'Minhas habilidades com HTML já são bem desenvolvidas, passei muito tempo praticando essa técnologia e hoje em dia me considero bem preparado para fazer qualquer coisa que precise utilizar esse recurso.'},
+    {id:3, title:'JavaScript', img:'assets/img/javascript.svg', pct:'90%', description:'Minhas habilidades com HTML já são bem desenvolvidas, passei muito tempo praticando essa técnologia e hoje em dia me considero bem preparado para fazer qualquer coisa que precise utilizar esse recurso.'},
+    {id:4, title:'TypeScript', img:'assets/img/typescript.svg', pct:'90%', description:'Minhas habilidades com HTML já são bem desenvolvidas, passei muito tempo praticando essa técnologia e hoje em dia me considero bem preparado para fazer qualquer coisa que precise utilizar esse recurso.'},
+    {id:5, title:'React', img:'assets/img/react.svg', pct:'90%', description:'Minhas habilidades com HTML já são bem desenvolvidas, passei muito tempo praticando essa técnologia e hoje em dia me considero bem preparado para fazer qualquer coisa que precise utilizar esse recurso.'},
+    {id:6, title:'Figma', img:'assets/img/figma.svg', pct:'90%', description:'Minhas habilidades com HTML já são bem desenvolvidas, passei muito tempo praticando essa técnologia e hoje em dia me considero bem preparado para fazer qualquer coisa que precise utilizar esse recurso.'}
+];
