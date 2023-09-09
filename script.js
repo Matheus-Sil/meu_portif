@@ -36,7 +36,7 @@ habilidades.map((item, index)=>{
 function closeModal() {
   c('.des-float-habilidade').style.opacity = 0;
   setTimeout(() =>{
-      c('.  des-float-habilidade').style.display = 'none';
+      c('.des-float-habilidade').style.display = 'none';
   }, 200)
 }
 c('.button-exit').addEventListener('click', closeModal);
