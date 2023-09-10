@@ -19,6 +19,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     background-color: var(--background-main);
 }
@@ -35,13 +40,6 @@ body {
     }
 }
 
-@keyframes menuMobile {
-    0%{
-        top:-300px;
-    } 100% {
-        top: 70px;
-    }
-}
 
 /* nav bar */
 .container-nav {
@@ -61,7 +59,6 @@ body {
 }
 
 .menu-mobile {
-    
     display: none;
 }
 
@@ -116,8 +113,10 @@ body {
     animation: surge 1.3s ease forwards;
     animation-delay: .4s;
 }
-
-.active  {
+.nav .menu a:hover{
+    color: var(--color-title-span);
+}
+.nav .menu a.active{
     color: var(--color-title-span);
     border-bottom: 2px solid var(--color-title-span);
 }
@@ -363,6 +362,13 @@ body {
     margin-top: 40px
 }
 
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .icons a img {
     width: 100px;
     cursor: pointer;
@@ -370,24 +376,32 @@ body {
 
 .icons p {
     color: var(--color-text-white);
-    text-align: center;
 }
 
 /* description float */
 
-.des-float-habilidade {
+.container-float {
     position: absolute;
+    transition: .5s ease-in-out;
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    width: 90%;
+    width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.des-float-habilidade {
     background-color:rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(19px) brightness(1.01) opacity(90%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
+    padding-bottom: 10px;
+    height: 100%;
 }
 
 .des-float-habilidade .image{
@@ -621,33 +635,7 @@ body {
     .nav .logo::before {
         display: none;
     }
-    .nav .menu a::before {
-        display: none;
-    }
 
-    .apresentation h1::before {
-        display: none;
-    }
-
-    .apresentation h3::before {
-        display: none;
-    }
-
-    .apresentation p::before {
-        display: none;
-    }
-
-    .container-image::before {
-        display: none;
-    }
-
-    .container--button::before {
-        display: none;
-    }
-
-    .before::before {
-        display: none;
-    }
     /* style inicio */
     .inicio {
         height: 100%;
@@ -694,7 +682,7 @@ body {
         width: 100%;
         border-radius: 0;
     }
-    
+
     /* buttons */
     .cssbuttons-io {
         margin-top: 10px;
@@ -704,6 +692,7 @@ body {
         padding: 0.5em 1em 0.5em 1.05em;
         color: var(--background-main);
     } 
+
 
     /* educação */
     .container-educacao .educacao .container-description {
@@ -734,37 +723,12 @@ body {
         width: 90%;
     }
 
-    .nav .logo::before {
-        display: none;
-    }
-
-    .nav .menu a::before {
-        display: none;
-    }
-
-    .apresentation h1::before {
-        display: none;
-    }
-
-    .apresentation h3::before {
-        display: none;
-    }
-
-    .apresentation p::before {
-        display: none;
-    }
-
-    .container-image::before {
-        display: none;
-    }
-
-    .container--button::before {
-        display: none;
-    }
-
+    .nav .menu a::before, .apresentation h1::before,
+    .apresentation h3::before,.apresentation p::before,
+    .container-image::before,.container--button::before,
     .before::before {
         display: none;
-    }
+    }   
 
     .nav .menu {
         position: absolute;
@@ -778,7 +742,7 @@ body {
         z-index: 1000;
         border-top: 1px solid #9e9e9e;
         padding: 2rem 0;
-        animation: menuMobile 1s ease-in-out;
+        transition: .5s ease-in-out;
         display: none;
     }
 
@@ -848,13 +812,40 @@ body {
         grid-template-rows: repeat(3, 1fr);
     }
     
-    .icons-habilidades .icons {
-        width: 80px;
+    .icons-habilidades .icons img{
+        width: 120px;
         cursor: pointer;
     }
 
     #habilidades h2 {
         font-size: 28px;
+    }
+
+    .des-float-habilidade {
+        height: max-content;
+        padding: 10px 0 20px 0;
+    }
+
+    .des-float-habilidade .image{
+        width: 100px;
+        margin-top: 20px;
+    }
+    
+    .des-float-habilidade .button-exit svg{
+        height: 34px;
+        width: 34px;
+    }
+    
+    .des-float-habilidade .level-bar {
+        height: 14px;
+        width: 75%;
+    }
+    
+    .des-float-habilidade .desc {
+        text-align: justify;
+        margin-top: 20px;
+        width: 80%;
+        font-size: 16px;
     }
 
     .projetos h2 {
@@ -945,7 +936,6 @@ body {
         z-index: 1000;
         border-top: 1px solid #9e9e9e;
         padding: 2rem 0;
-        animation: menuMobile .5s ease-in-out;
         display: none;
     }
 
@@ -953,30 +943,9 @@ body {
         padding: .4rem;
     }
 
-    .nav .menu a::before {
-        display: none;
-    }
-
-    .apresentation h1::before {
-        display: none;
-    }
-
-    .apresentation h3::before {
-        display: none;
-    }
-
-    .apresentation p::before {
-        display: none;
-    }
-
-    .container-image::before {
-        display: none;
-    }
-
-    .container--button::before {
-        display: none;
-    }
-
+    .nav .menu a::before, .apresentation h1::before,
+    .apresentation h3::before,.apresentation p::before,
+    .container-image::before,.container--button::before,
     .before::before {
         display: none;
     }
@@ -1049,24 +1018,21 @@ body {
     }
 
     .des-float-habilidade {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%);
         width: 100%;
-        height: 100%;
+        height: max-content;
         background-color:rgba(255, 255, 255, 0.4);
         backdrop-filter: blur(19px) brightness(1.01) opacity(90%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0px 10px;
-        display: none;
+        padding: 10px 10px;
     }
     
     .des-float-habilidade .image{
         width: 100px;
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
     }
     
     .des-float-habilidade .button-exit{
