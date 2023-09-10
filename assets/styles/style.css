@@ -829,6 +829,8 @@ body {
     .des-float-habilidade .image{
         width: 100px;
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
     }
     
     .des-float-habilidade .button-exit svg{
