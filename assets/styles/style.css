@@ -513,20 +513,35 @@ body {
 
 .container-educacao .educacao .container-description {
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.container-educacao .educacao .container-description .coluna-habilidades {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #fff;
+    gap: 20px;
+}
+
+.container-educacao .educacao .container-description .linha-central {
+    height: 200px;
+    width: 5px;
+    background-color: var(--color-text-white);
 }
 
 .container-educacao .educacao .container-description .description {
-    flex: 1;
     text-align: justify;
     color: var(--color-text-white);
 }
 
 .container-educacao .educacao .container-description .description h4 {
     font-weight: bold;
-    text-align: center;
     font-size: 1.5rem;
-    margin:20px 0;
+}
+
+.container-educacao .educacao .container-description .description p,
+.container-educacao .educacao .container-description .description h5 {
+    margin-left: 10px;
 }
 
 /* footer */
